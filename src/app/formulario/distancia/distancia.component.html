@@ -1,0 +1,28 @@
+<div>
+    <h1>Multiplica 2 Numeros</h1>
+    <form [formGroup]="mates">
+        <div>
+            <label for="">coordenada x1</label>
+            <input formControlName='x1' type="number">
+        </div>
+        <br>
+        <div>
+            <label for="">coordenada y1</label>
+            <input formControlName='y1' type="number">
+        </div>
+        <br>
+                <div>
+            <label for="">coordenada x2</label>
+            <input formControlName='x2' type="number">
+        </div>
+        <br>
+        <div>
+            <label for="">coordenada y2</label>
+            <input formControlName='y2' type="number">
+        </div>
+        <br>
+        <button (click)="distancia()" type="submit">calcular distancia</button>
+
+        <h1>Resultado {{resultado}}</h1>
+    </form>
+</div>
