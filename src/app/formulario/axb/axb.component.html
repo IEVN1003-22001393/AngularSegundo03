@@ -1,0 +1,24 @@
+<div class="container">
+
+    <form [formGroup]="valores">
+                    <div>
+                        
+                      <label>A</label>  <input class="form-control rounded-3" formControlName='v1' type="number">
+                    </div>
+                
+                    <div>
+                        
+                      <label>B</label>  <input class="form-control rounded-3" formControlName='v2' type="number">
+                    </div>
+                   
+ 
+        <div class="text-center mt-4 mb-5">
+            <button class="btn btn-success btn-lg" (click)="botonazo()" type="submit">
+                Calcular A x B
+            </button>
+        </div>
+       
+        <h1>Resultado: {{resultado}}</h1>
+
+    </form>
+</div>
