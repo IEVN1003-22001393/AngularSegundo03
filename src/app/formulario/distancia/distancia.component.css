@@ -1,0 +1,8 @@
+.hrvertical {
+    width: 200px;
+    height: 1px;  
+    transform: rotate(90deg);
+    margin: 100px auto;
+    margin-left: -50px;
+    margin-right: -50px;
+}

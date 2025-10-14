@@ -1,28 +1,43 @@
+<br>
 <div>
-    <h1>Multiplica 2 Numeros</h1>
+    <h1 class="text-center pb-4">Saca la distancia entre dos puntos</h1>
     <form [formGroup]="mates">
-        <div>
-            <label for="">coordenada x1</label>
-            <input formControlName='x1' type="number">
+<br>
+<hr>
+ 
+<div class="row justify-content-center align-items-center">
+    <div class="col-4">
+        <div class="row ">
+                <div class="col-4 pb-2">
+                    <label for="">coordenada x1</label>
+                    <input class="rounded-3 " formControlName='x1' type="number">
+                </div>
+                <div class="col-4 ps-5">
+                    <label for="">coordenada y1</label>
+                    <input class="rounded-3 " formControlName='y1' type="number">
+            </div>
         </div>
-        <br>
-        <div>
-            <label for="">coordenada y1</label>
-            <input formControlName='y1' type="number">
+ 
+        <div class="row ">
+                <div class="col-4 ">
+                    <label for="">coordenada x2</label>
+                    <input class="rounded-3" formControlName='x2' type="number">
+                </div>
+                <div class="col-4 ps-5">
+                    <label for="">coordenada y2</label>
+                    <input class="rounded-3 " formControlName='y2' type="number">
+                </div>
         </div>
-        <br>
-                <div>
-            <label for="">coordenada x2</label>
-            <input formControlName='x2' type="number">
+       
+    </div>
+    <hr class="hrvertical">
+    <h3 class="col-4">Resultado = {{resultado2}}</h3>
+</div>
+<br>
+<hr>
+        <div class="text-center mt-4">
+        <button class="btn btn-success" (click)="res()" type="submit">calcular distancia</button>
         </div>
-        <br>
-        <div>
-            <label for="">coordenada y2</label>
-            <input formControlName='y2' type="number">
-        </div>
-        <br>
-        <button (click)="distancia()" type="submit">calcular distancia</button>
-
-        <h1>Resultado {{resultado}}</h1>
+       
     </form>
 </div>

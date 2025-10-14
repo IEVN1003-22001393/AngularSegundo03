@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {distancia} from './distancia';
+ 
+ 
 @Component({
   selector: 'app-distancia',
   imports: [FormsModule, ReactiveFormsModule],
@@ -9,13 +11,9 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 })
 export class DistanciaComponent {
   mates!:FormGroup
-  resultado!:number
-    r1!:number
-      r2!:number
-        r3!:number
-
-
-
+  resultado2!:number
+  puntos = new distancia();
+ 
   constructor() { }
   ngOnInit():void{
     this.mates = new FormGroup({
@@ -25,19 +23,20 @@ export class DistanciaComponent {
     y2: new FormControl(''),
   })
 }
-distancia():void{
-  const x1 = this.mates.get('x1')?.value
-  const y1 = this.mates.get('y1')?.value
-  const x2 = this.mates.get('x2')?.value
-  const y2 = this.mates.get('y2')?.value
-  this.r1 =(x2 - x1)^2 
-  this.r2 =(y1 - y2)^2
-  this.r3=this.r1+this.r2
-  this.resultado=(this.r3)^0.5
+ 
+res():void{
 
+  this.puntos.x1 = this.mates.value.x1
+  this.puntos.x2 = this.mates.value.x2
+  this.puntos.y1 = this.mates.value.y1
+  this.puntos.y2 = this.mates.value.y2
  
 
-}
+  this.puntos.opera()
 
-
+  this.resultado2 = this.puntos.resultado
+ 
+ 
 }
+}
+ 
