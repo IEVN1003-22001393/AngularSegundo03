@@ -1,0 +1,59 @@
+<div class="container">
+    <hr>
+    <h1 class="text-center pb-4">Calcula tu Signo del Zodíaco Chino y Edad</h1>
+   
+    <form [formGroup]="signo">
+        <br>
+ 
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8 justify-content-center">
+               
+                <div class="mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input class="form-control rounded-3" formControlName='nombre' type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="ap1">Apellido Paterno</label>
+                    <input class="form-control rounded-3" formControlName='apellido1' type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="ap2">Apellido Materno</label>
+                    <input class="form-control rounded-3" formControlName='apellido2' type="text">
+                </div>
+ 
+                <div class="row g-2 mt-3">
+                    <div class="col-4">
+                        <label for="dia">Día</label>
+                        <input class="form-control rounded-3" formControlName='dia' type="number">
+                    </div>
+                    <div class="col-4">
+                        <label for="mes">Mes</label>
+                        <input class="form-control rounded-3" formControlName='mes' type="number">
+                    </div>
+                    <div class="col-4">
+                        <label for="anio">Año</label>
+                        <input class="form-control rounded-3" formControlName='anio' type="number">
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="text-center mt-4 mb-5">
+            <button class="btn btn-danger btn-lg" (click)="calcular()" type="submit">
+                Calcular zodiaco
+            </button>
+        </div>
+       
+        <hr>
+ 
+        <div *ngIf="zodiaco" class="row text-center mt-4">
+            <h3 class="col-12 mb-3">Hola {{nomCom}}</h3>
+            <h2 class="col-12">Tienes {{Edad}} años</h2>
+            <h2 class="col-12">Tu signo zodiacal chino es el {{zodiaco}}</h2>
+ 
+            <div class="col-12 mt-4">
+                <img [src]="imagen" style="max-width: 250px;">
+            </div>
+            </div>
+    </form>
+</div>

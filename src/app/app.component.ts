@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DistanciaComponent } from './formulario/distancia/distancia.component';
-import { ZodiacoComponent } from './formulario/zodiaco/zodiaco.component';
-import { AxbComponent } from './formulario/axb/axb.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { initFlowbite} from 'flowbite'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DistanciaComponent, ZodiacoComponent, AxbComponent],
+  imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'AngularSegundo03';
+
+  ngOnint(){
+  initFlowbite();
 }
+}
+
+
