@@ -18,4 +18,7 @@ export const routes: Routes = [
         loadChildren: ()=>
             import('./formulario/formulario.routes').then((m) => m.default),
     },
+
+
+        
 ];

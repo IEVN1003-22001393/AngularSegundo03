@@ -12,12 +12,12 @@ export default [
     },
 
     {
-    path: 'eliminar',
+    path: 'eliminar/:matricula',
     loadComponent:()=>import('./eliminar/eliminar.component').then(c=>c.EliminarComponent)
     },
 
     {
-    path: 'editar',
+    path: 'editar/:matricula',
     loadComponent:()=>import('./editar/editar.component').then(c=>c.EditarComponent)
     },
     
